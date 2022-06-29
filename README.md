@@ -1,2 +1,2 @@
 # snadingTed
-A vinted.com items publisher with nearly identical characteristics
+A vinted.com nearly identical characteristics items publisher 
