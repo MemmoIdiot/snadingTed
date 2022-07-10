@@ -48,6 +48,7 @@ driver: Chrome = Chrome(
 )
 
 driver.get("https://www.vinted.it/items/new")
+#image
 time.sleep(1)
 driver.find_element(By.CSS_SELECTOR,"#photos > div.Cell_cell__3V4ao.Cell_wide__1ukxw > div > div > div > div.media-select__input > div > button").click()
 time.sleep(1)
