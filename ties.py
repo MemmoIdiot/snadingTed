@@ -1,43 +1,13 @@
-from ast import expr_context
 from selenium.webdriver import Chrome
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
 from webdriver_manager.chrome import ChromeDriverManager
-import time
-import pyautogui
+from time import sleep
+from pyautogui import write,press
 
-vinted_product_color={
-    'Nero' : 1,
-    'Marrone' : 2,
-    'Grigio' : 3,
-    'Beige' : 4,
-    'Rosa' : 5,
-    'Viola' : 6,
-    'Rosso' : 7,
-    'Giallo' : 8,
-    'Blu' : 9,
-    'Verde' : 10,
-    'Arancione' : 11,
-    'Bianco' : 12,
-    'Argento' : 13,
-    'Oro' : 14,
-    'Multi' : 15,
-    'Cachi' : 16,
-    'Turchese' : 17,
-    'Panna' : 20,
-    'Albicocca' : 21,
-    'Corallo' : 22,
-    'Borgogna' : 23,
-    'Rosa' : 24,
-    'Lilla' : 25,
-    'Azzurro' : 26,
-    'Blu marino' : 27,
-    'Verde scuro' : 28,
-    'Senape' : 29,
-    'Menta' : 30,
-}
+
 
 option: Options = Options()
 option.add_experimental_option("debuggerAddress", "localhost:8989")
@@ -49,11 +19,11 @@ driver: Chrome = Chrome(
 
 driver.get("https://www.vinted.it/items/new")
 #image
-time.sleep(1)
+sleep(1)
 driver.find_element(By.CSS_SELECTOR,"#photos > div.Cell_cell__3V4ao.Cell_wide__1ukxw > div > div > div > div.media-select__input > div > button").click()
-time.sleep(1)
-pyautogui.write('C:\\Users\\Paolo\\OneDrive\\altro\\Immagini\\images.jpg') 
-pyautogui.press('enter')
+sleep(1)
+write('C:\\Users\\Paolo\\OneDrive\\altro\\Immagini\\images.jpg') 
+press('enter')
 
 # * title
 driver.find_element(By.XPATH,
