@@ -2,7 +2,7 @@
     "chrome_datas": {
         "chrome_profile_start_path": "C:\\ProgramFiles(x86)\\chromeprofile",
         "chrome.exe_start_path": "C:\\Program Files (x86)\\",
-        "chrome":"chrome.exe"
+        "chrome": "chrome.exe"
     },
     "bot_css_selector": {
         "image_button": "#photos > div.Cell_cell__3V4ao.Cell_wide__1ukxw > div > div > div > div.media-select__input > div > button",

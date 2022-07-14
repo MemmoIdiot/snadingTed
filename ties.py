@@ -21,7 +21,6 @@ def get_images(directory_path):
         if isfile(f):
             imgae_name = f.replace(f"{directory_path}\\", "")
             images += f'\"{imgae_name}\" '
-            print(images)
 
     return directory_path + "\\" + images
 
@@ -75,8 +74,7 @@ def main(bot_data):
     #Selector of first 17 colors : color-(1,17) .Checkbox_button__34dpJ
     #Selector of last 10 colors : #color-(20,30) > div.Cell_suffix__1Yku3
     driver.find_element(By.CSS_SELECTOR, bot_data["color"]["color1"]).click()
-    #driver.find_element(By.CSS_SELECTOR, "#color-1 > div.Cell_suffix__1Yku3 > label > span").send_keys("Nero")
-
+    sleep(1)
     driver.find_element(By.CSS_SELECTOR, bot_data["color"]["color2"]).click()
     driver.find_element(By.CSS_SELECTOR,
                         bot_data["color"]["exit_click"]).click()

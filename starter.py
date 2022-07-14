@@ -1,9 +1,13 @@
 #File to start the Chrome window
+from os.path import join
+from os import walk, mkdir
+from os.path import exists
+from subprocess import Popen
+from json import load
 
 
 def find_files(filename, search_path):
-    from os.path import join
-    from os import walk
+
     result = ""
     for root, dir, files in walk(search_path):
         if filename in files:
@@ -13,8 +17,6 @@ def find_files(filename, search_path):
 
 
 def check_chrome_profile(directory_path):
-    from os.path import exists
-    from os import mkdir
 
     if not exists(directory_path):
         mkdir(directory_path)
@@ -23,9 +25,6 @@ def check_chrome_profile(directory_path):
 def start(func):
 
     def wrapper():
-        from subprocess import Popen
-        from time import sleep
-        from json import load
 
         file = open('data.json')
 
@@ -42,7 +41,6 @@ def start(func):
         Popen(
             f'{path_1} --remote-debugging-port=8989 --user-data-dir=\"{chrome_profile}\"'
         )
-        sleep(1)
 
         func(bot_data)
 
