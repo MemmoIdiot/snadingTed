@@ -5,7 +5,6 @@ from typing import List
 
 from Data import Data
 from items.Colors import Colors
-from items.ties.Config import Config as config
 from selenium.webdriver import Chrome
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.chrome.service import Service
