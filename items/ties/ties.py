@@ -62,7 +62,8 @@ def job():
         brand.clear()
         brand.send_keys("Annuncio senza brand")
         brand.click()
-
+        driver.find_element(By.XPATH, '//*[@id="empty-brand"]').click()
+        
         # * status: excellent (🇮🇹 Ottimo)
         driver.find_element(By.XPATH, "//input[@id='status_id']").click()
         sleep(1)
@@ -87,6 +88,7 @@ def job():
             By.XPATH, "//span[@aria-labelledby='package-size-1']").click()
         sleep(1)
 
+        exit()
         # * (Carica 🇮🇹)
         driver.find_element(
             By.XPATH,
